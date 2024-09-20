@@ -15,6 +15,7 @@ body{
    display: grid;
    place-items: center;
    margin-top: -2000px;
+   z-index: 99;
 
 }
 .news-pop-up-inner{
