@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .contact-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info .info-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+        hr {
+            margin: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+        .map {
+            margin-top: 40px;
+            height: 300px;
+        }
+        .newsletter {
+            background-color: #f5f5f5;
+            padding: 30px 0;
+        }
+       
+        .banner {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        .banner img {
+            width: 100%;
+            height:auto;
+            display: block;
+        }
+        .banner .breadcrumb-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background:transparent;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .banner .breadcrumb-container a {
+            color: #fff;
+        }
+        .banner .breadcrumb-container span {
+            color: #fff;
+            margin: 0 5px;
+        }
+        @media (max-width: 767px) {
+            .banner .breadcrumb-container {
+                top: 10px;
+                left: 10px;
+                padding: 5px;
+            }
+            .banner img {
+            width: 100%;
+            height: 50px;
+            display: block;
+        }
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="banner">
+        <img src="images/Breadcrumbs.png" class="img-fluid" alt="Banner">
+       
+        <div class="breadcrumb-container">
+            <a href="#" class="text-white text-decoration-none">
+                <i class="fas fa-home"></i> 
+            </a>
+            <span class="text-white mx-2">></span>
+            <a href="#" class="text-decoration-none" style="color: #28a745;">
+                Contact
+            </a>
+        </div>
+    </div>
+
+   
+    <div class="container mt-5">
+        <div class="row">
+           
+            <div class="col-md-4">
+                <div class="contact-info">
+                   
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>2715 Ash Dr. San Jose, South Dakota 83475</p>
+                    </div>
+                    <hr>
+                   
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Proxy@gmail.com<br>Help.proxy@gmail.com</p>
+                    </div>
+                    <hr>
+                   
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(219) 555-0114<br>(164) 333-0487</p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-8">
+                <h3>Just Say Hello!</h3>
+                <p>Do you fancy saying hi or want to get started with your project? Feel free to contact me.</p>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map mt-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.760987099328!2d-122.084249!3d37.4219999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7383dff4a77%3A0x2ed7f68b1e!2sGoogleplex!5e0!3m2!1sen!2sus!4v1510923206668" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    
+    <div class="newsletter mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Subscribe to our Newsletter</h5>
+                    <p>Pellentesque eu nibh eget massa congue mattis nec tellus. Phasellus pulvinar elit at magna.</p>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-between">
+                    <input type="email" class="form-control me-2" placeholder="Your email address">
+                    <button class="btn btn-success me-3">Subscribe</button>
+                    
+                    <div class="d-flex">
+                        <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

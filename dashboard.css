@@ -1,0 +1,231 @@
+#dashboard-user .row{
+    --bs-gutter-x: 0rem;
+    
+}
+#dashboard-user{
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 10px;
+}
+.dashboard-user-list .row{
+    --bs-gutter-x: 0rem !important;
+     gap: 10px 0px;
+}
+.dashboard-user-btn{
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    padding: 20px 0 10px 0;
+    margin: 0px 10px;
+}
+.dashboard-user-btn h4{
+  
+font-size: 18px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+margin-left: 10px;
+
+}
+.dashboard-user-btn ul{
+    padding: 0px;
+    margin: 0px;
+}
+.user-profile{
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    padding: 20px;
+    text-align: center;
+    margin: 0px 10px 0 0 ;
+
+}
+
+/* text */
+.user-profile h4 , .user-add h4{
+
+font-size: 18px;
+font-weight: 500;
+line-height: 30px;
+/* text-align: center; */
+color: #1A1A1A;
+margin: 10px auto;
+
+}
+.user-profile p , .user-add p{
+    font-size: 14px;
+    color: #808080;
+}
+.user-profile h6 , .user-add h6{
+    margin-top: 18px;
+    font-size: 15px;
+}
+.user-add h6 a , .user-profile h6 a{
+    color: #00B207 !important;
+    text-decoration: none;
+
+}
+.user-add{
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    padding: 20px;
+   
+}
+.order-history{
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    padding: 20px 0px;
+}
+.order-history .row{
+    --bs-gutter-x: 1rem !important;
+     gap: 10px 0px;
+}
+.order-history label{
+    font-size: 14px;
+    color: #1A1A1A;
+}
+.order-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+}
+.order-title h4{
+
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+color: #1A1A1A;
+
+}
+.order-title a{
+   color: #00B207 !important;
+   text-decoration: none;
+   font-size: 14px;
+}
+.dashboard-user-btn i{
+    margin:  0px 8px ;
+
+    padding: 6px 7px;
+    border-radius: 50%;
+    color: rgb(52, 52, 52);
+    
+}
+.dashboard-user-btn ul li{
+    margin: 0px 0;
+    list-style-type: none;
+    padding: 10px 0px;
+}
+.dashboard-user-btn ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 24px;
+    color: #1A1A1A;
+    font-weight: 400;
+}
+.dashboard-user-list.dash-active{
+    display: block !important;
+    animation: datashow 1s linear ;
+    opacity: 1;
+}
+.dashboard-user-btn .dash-active{
+    background-color: #EDF2EE !important;
+    color: #1A1A1A;
+}
+.dash-active i {
+    margin:  0px 8px ;
+    background-color: transparent;
+    padding: 6px 7px;
+    border-radius: 50%;
+ 
+
+}
+.dash-active li a{
+    background-color: black !important;
+    color: white;
+}
+
+.dashboard-user-list{
+    max-width: 1200px;
+    /* margin: 100px auto 40px auto; */
+    display: none;
+    opacity: 0;
+}
+
+.table thead tr th{
+    
+    background-color: #f2f2f2 !important;
+    font-weight: 500;
+    font-size: 14px;
+    
+}
+.table tbody tr{
+    font-size: 13px;
+}
+.table td a{
+    color: #00B207 !important;
+    text-decoration: none;
+}
+
+
+/* pagination */
+.order-pagination{
+    text-align: center;
+}
+.order-pagination i{
+    padding: 8px 10px;
+    border: 1px solid #E6E6E6;
+    font-size: 12px;
+    color: #1A1A1A;
+    margin: 0px 20px;
+}
+.order-pagination span{
+    padding: 6px 10px;
+    font-size: 13px;
+    margin: 0px 2px;
+
+}
+.order-pagination .page-active{
+    background-color: #00B207;
+    color: white;
+    border-radius: 50%;
+}
+
+.user-pro-form form{
+    padding: 20px;
+}
+.user-pro-form form button{
+    width: fit-content;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+.user-img{
+    padding: 20px;
+    text-align: center;
+}
+.user-img h4{
+    margin: 10px 0px;
+
+}
+.user-img button{
+    margin: 20px 0px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 2px solid #00B207;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #00B207;
+}
+
+
+@media (max-width:768px)
+{
+    .dashboard-user-btn {
+       
+        margin: 10px 0px;
+    }
+    .user-profile {
+      
+        margin: 10px 0;
+    }
+}

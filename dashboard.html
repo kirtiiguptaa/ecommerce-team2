@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Ecobazar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+  integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+  integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+  <link
+  rel="stylesheet"
+  href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+/>
+
+<style>
+  .password-icon{
+    top: 35px !important;
+  }
+</style>
+</head>
+<body>
+     <header>
+         <div id="head-01">
+            <div>
+                <p><span><i class="fa-thin fa-location-dot"></i></span>Store Location: Lincoln- 344, Illinois, Chicago, USA</p>
+            </div>
+            <div>
+                 <span>
+                    <a href="#">Eng <span><i class="fa-light fa-angle-down"></i></span></a>
+                    <a href="#">USD <span><i class="fa-light fa-angle-down"></i></span></a>
+                 </span>
+
+                 <span>
+                    <a href="#">Sign In</a>
+                    <span>/</span>
+                    <a href="#">Sign Up</a>
+                 </span>
+            </div>
+         </div>
+
+         <div id="head-02">
+            <div>
+                <h2>Ecobazar</h2>
+            </div>
+            <div>
+                <div class="input-group ">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn " type="button" id="button-addon2">Search</button>
+                  </div>
+            </div>
+            <div class="cart-price">
+               <div>
+                <i class="fa-light fa-heart"></i>
+                <span class="line"></span>
+                <i class="fa-light fa-bag-shopping"></i>
+               </div>
+                <div>
+                   
+                        <div>
+                            <p>Shopping cart:</p>
+                        </div>
+                        <div>
+                            <h4>$57.00</h4>
+                        </div>
+                
+                </div>
+            </div>
+         </div>
+
+         <div id="head-03">
+            <div id="head-03-inner">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">Home <span><i class="fa-light fa-angle-down"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#">Shop <span><i class="fa-light fa-angle-down"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#">Pages <span><i class="fa-light fa-angle-down"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#">Blog <span><i class="fa-light fa-angle-down"></i></span></a>
+                        </li>
+                        <li>
+                            <a href="#">About Us </a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#"><span><i class="fa-light fa-phone-volume"></i></span>(219) 555-0114 </a>
+                </div>
+            </div>
+         </div>
+     </header>
+
+
+     <div class="breadcrumb">
+        <div class="breadcrumb-list">
+            <div>
+                <i class="fa-light fa-house"></i>
+            <i class="fa-light fa-angle-right"></i>
+            <span>Account</span>
+            <i class="fa-light fa-angle-right"></i>
+            <span class="active-page">Login</span>
+            </div>
+        </div>
+     </div>
+
+
+      <div id="dashboard-user">
+        <div class="row">
+             <div class="col-md-3 col-12">
+                <div class="dashboard-user-btn">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li class="dash-active"><a
+                                href="#one"><i class="fa-solid fa-grid-2-plus"></i> Dashboard</a></li>
+                        <li><a href="#two"><i class="fa-regular fa-clock-rotate-left"></i>
+                                Order History</a></li>
+                        <li><a href="#">
+                          <i class="fa-regular fa-heart"></i> Wishlist</a></li>
+                        <li><a href="#">
+                          <i class="fa-light fa-bag-shopping"></i> Shopping Cart</a></li> 
+
+                            <li><a href="#five">
+                              <i class="fa-regular fa-gear"></i> Settings</a></li> 
+
+                                <li><a href="#">
+                                  <i class="fa-regular fa-arrow-right-from-bracket"></i> Log-Out</a></li> 
+                    </ul>
+                </div>
+             </div>
+             <div class="col-md-9 col-12 dashboard-user-list" id="one">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="user-profile">
+                            <img src="images/user.png" alt="user" class="img-fluid">
+                            <h4>Dianne Russell</h4>
+                            <p>Customer</p>
+                            <h6><a href="#">Edit Profile</a></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                     <div class="user-add">
+                        <p>Billing Address</p>
+                        <h4>Dainne Russell</h4>
+                        <p class="address">4140 Parker Rd. Allentown,<br> New Mexico 31134</p>
+                        <h6>dainne.ressell@gmail.com</h6>
+                        <h6>(671) 555-0110</h6>
+                        <h6><a href="#">Edit Address</a></h6>
+                     </div>
+                    </div>
+                    <div class="col-12">
+                       <div class="order-history">
+                           <div class="order-title">
+                              <div>
+                                <h4>Recet Order History</h4>
+                              </div>
+                              <div>
+                                <a href="#">View All</a>
+                              </div>
+                           </div>
+
+                           <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Total</th>
+                                <th scope="col" colspan="2">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+                            </tbody>
+                          </table>
+                       </div>
+                    </div>
+                </div>
+             </div>
+
+             <div class="col-md-9 col-12 dashboard-user-list" id="two">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="order-history">
+                            <div class="order-title">
+                               <div>
+                                 <h4>Recet Order History</h4>
+                               </div>
+                              
+                            </div>
+ 
+                            <table class="table table-borderless">
+                             <thead>
+                               <tr>
+                                 <th scope="col">Order ID</th>
+                                 <th scope="col">Date</th>
+                                 <th scope="col">Total</th>
+                                 <th scope="col" colspan="2">Status</th>
+                               </tr>
+                             </thead>
+                             <tbody>
+                               <tr>
+                                 <td>#738</td>
+                                 <td>8 Sep, 2020</td>
+                                 <td>$135.00 (5 Products)</td>
+                                 <td>Processing</td>
+                                 <td><a href="#">View Details</a></td>
+ 
+                               </tr>
+                               <tr>
+                                 <td>#738</td>
+                                 <td>8 Sep, 2020</td>
+                                 <td>$135.00 (5 Products)</td>
+                                 <td>Processing</td>
+                                 <td><a href="#">View Details</a></td>
+ 
+                               </tr>
+                               <tr>
+                                 <td>#738</td>
+                                 <td>8 Sep, 2020</td>
+                                 <td>$135.00 (5 Products)</td>
+                                 <td>Processing</td>
+                                 <td><a href="#">View Details</a></td>
+ 
+                               </tr>
+                               <tr>
+                                 <td>#738</td>
+                                 <td>8 Sep, 2020</td>
+                                 <td>$135.00 (5 Products)</td>
+                                 <td>Processing</td>
+                                 <td><a href="#">View Details</a></td>
+ 
+                               </tr>
+ 
+                               <tr>
+                                 <td>#738</td>
+                                 <td>8 Sep, 2020</td>
+                                 <td>$135.00 (5 Products)</td>
+                                 <td>Processing</td>
+                                 <td><a href="#">View Details</a></td>
+ 
+                               </tr>
+ 
+                               <tr>
+                                 <td>#738</td>
+                                 <td>8 Sep, 2020</td>
+                                 <td>$135.00 (5 Products)</td>
+                                 <td>Processing</td>
+                                 <td><a href="#">View Details</a></td>
+ 
+                               </tr>
+                               <tr>
+                                 <td>#738</td>
+                                 <td>8 Sep, 2020</td>
+                                 <td>$135.00 (5 Products)</td>
+                                 <td>Processing</td>
+                                 <td><a href="#">View Details</a></td>
+ 
+                               </tr>
+
+                               <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>#738</td>
+                                <td>8 Sep, 2020</td>
+                                <td>$135.00 (5 Products)</td>
+                                <td>Processing</td>
+                                <td><a href="#">View Details</a></td>
+
+                              </tr>
+                             </tbody>
+                           </table>
+
+                             <div class="order-pagination">
+                                <i class="fa-light fa-angle-left"></i>
+                                <span class="page-active">
+                                    1
+                                </span>
+                                <span>2</span>
+                                <span>3</span>
+                                <i class="fa-light fa-angle-right"></i>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+             </div>
+
+             <div class="col-md-9 col-12 dashboard-user-list" id="five">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="order-history">
+                            <div class="order-title">
+                               <div>
+                                 <h4>Account Settings</h4>
+                               </div>
+                              
+                            </div>
+
+                            <div class="user-pro-form">
+                                <div class="row">
+                                    <div class="col-lg-7 col-12">
+                                        <form action="">
+
+                                            <div>
+                                                <label for="fn">First name</label>
+                                             <input type="text" id="fn" placeholder="Dianne">
+                                            </div>
+
+                                            <div>
+                                                <label for="fn">Last name</label>
+
+                                                <input type="text" id="ln" placeholder="Russell">
+                                               </div>
+
+                                               <div>
+                                                <label for="em">Email</label>
+                                                <input type="email" id="em" placeholder="dianne.russell@gmail.com">
+                                               </div>
+
+                                               <div>
+                                                <label for="pn">Phone</label>
+                                                <input type="email" id="pn" placeholder="(603) 555-0123">
+                                               </div>
+                                           
+                                 
+                                           
+                                 
+                                             <button>
+                                                Save Changes
+                                             </button>
+                                 
+                                            
+                                           </form>
+                                    </div>
+
+                                    <div class="col-lg-5 col-12">
+                                        <div class="user-img">
+                                          <div>
+                                            <img src="images/user.png" alt="user" class="img-fluid">
+                                          </div>
+                                       
+                                            <button>
+                                                Chose Image
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                           
+                        </div>
+                     </div>
+                </div>
+
+
+                <div class="row my-3">
+                    <div class="col-12">
+                        <div class="order-history">
+                            <div class="order-title">
+                               <div>
+                                 <h4>Billing Address</h4>
+                               </div>
+                              
+                            </div>
+
+                            <div class="user-pro-form">
+                                <div class="row">
+                                    <div class=" col-12">
+                                        <form action="" class="row">
+
+                                            <div class="col-lg-4 col-sm-6 col-12">
+                                                <label for="fn">First name</label>
+                                             <input type="text" id="fn" placeholder="Dianne">
+                                            </div>
+
+                                            <div class="col-lg-4 col-sm-6 col-12">
+                                                <label for="fn">Last name</label>
+
+                                                <input type="text" id="ln" placeholder="Russell">
+                                               </div>
+
+                                               <div class="col-lg-4 col-sm-6 col-12">
+                                                <label for="em">Email</label>
+                                                <input type="email" id="em" placeholder="dianne.russell@gmail.com">
+                                               </div>
+
+                                               <div class="col-lg-12 col-sm-6 col-12">
+                                                <label for="pn">Phone</label>
+                                                <input type="email" id="pn" placeholder="(603) 555-0123">
+                                               </div>
+
+                                               <div class="col-lg-4 col-sm-6 col-12">
+                                                <label for="inputState" class="form-label">State</label>
+                                                <select id="inputState" class="form-select">
+                                                  <option selected>Choose...</option>
+                                                  <option>...</option>
+                                                </select>
+                                               </div>
+
+                                               <div class="col-lg-4 col-sm-6 col-12">
+                                                <label for="inputState" class="form-label">State</label>
+                                                <select id="inputState" class="form-select">
+                                                  <option selected>Choose...</option>
+                                                  <option>...</option>
+                                                </select>
+                                               </div>
+
+                                               <div class="col-lg-4 col-sm-6 col-12">
+                                                <label for="inputState" class="form-label">State</label>
+                                                <select id="inputState" class="form-select">
+                                                  <option selected>Choose...</option>
+                                                  <option>...</option>
+                                                </select>
+                                               </div>
+                                           
+                                               <div class="col-lg-6 col-sm-6 col-12">
+                                                <label for="pn">Phone</label>
+                                                <input type="email" id="pn" placeholder="(603) 555-0123">
+                                               </div>
+                                               <div class="col-lg-6 col-sm-6 col-12">
+                                                <label for="pn">Phone</label>
+                                                <input type="email" id="pn" placeholder="(603) 555-0123">
+                                               </div>
+                                 
+                                           
+                                 
+                                             <button>
+                                                Save Changes
+                                             </button>
+                                 
+                                            
+                                           </form>
+                                    </div>
+
+                               
+                                </div>
+                            </div>
+ 
+                           
+                        </div>
+                     </div>
+                </div>
+
+                <div class="row my-3">
+                    <div class="col-12">
+                        <div class="order-history">
+                            <div class="order-title">
+                               <div>
+                                 <h4>Change Password</h4>
+                               </div>
+                              
+                            </div>
+
+                            <div class="user-pro-form">
+                                <div class="row">
+                                    <div class=" col-12">
+                                        <form action="" class="row">
+
+                                            <div class="col-lg-12 col-12 password">
+                                                <label for="fn">Current Password</label>
+                                                <input type="password" placeholder="Current Password" >
+         
+                                                <i class="fa-regular fa-eye password-icon"></i>
+                                            </div>
+
+                                         
+
+                                           
+                                           
+                                               <div class="col-lg-6 col-sm-6 col-12 password">
+                                                <label for="pn">New Password</label>
+                                                <input type="password" placeholder="Password" >
+         
+                                                <i class="fa-regular fa-eye password-icon"></i>
+                                               </div>
+                                               <div class="col-lg-6 col-sm-6 col-12 password">
+                                                <label for="pn">Confirm Password</label>
+                                                <input type="password" placeholder="Password" >
+         
+                                                <i class="fa-regular fa-eye password-icon"></i>
+                                               </div>
+                                 
+                                           
+                                 
+                                             <button>
+                                                Save Changes
+                                             </button>
+                                 
+                                            
+                                           </form>
+                                    </div>
+
+                               
+                                </div>
+                            </div>
+ 
+                           
+                        </div>
+                     </div>
+                </div>
+             </div>
+               
+             </div>
+        </div>
+      </div>
+    <!-- Subcribe our Newsletter -->
+    <div id="newletter">
+      <div class="newletter-inner">
+         <div class="row">
+          <div class="col-md-5 col-12">
+              <h4>Subcribe our Newsletter</h4>
+              <p>
+                  Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.
+              </p>
+          </div>
+          <div class="col-md-7 col-12">
+              <div class="newletter-input-sec">
+                  <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <button class="btn " type="button" id="button-addon2">Search</button>
+                  
+                          
+                      
+                    </div>
+                    <div>
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <i class="fa-brands fa-twitter"></i>
+                      <i class="fa-brands fa-pinterest"></i>
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+             
+              </div>
+
+                
+
+          </div>
+         </div>
+      </div>
+  </div>
+   
+    <footer class="footer">
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+                  <!-- Footer Branding -->
+                  <div class="col-lg-4 col-md-6 footer-about">
+                      <img src="images/logo.png" class="img-fluid" alt="Ecobazar">
+                      <p>
+                          Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.
+                      </p>
+                      <div class="footer-contact">
+                          <p>(219) 555–0114</p>
+                          <span>Or</span>
+                          <p>Proxy@gmail.com</p>
+                      </div>
+                  </div>
+  
+                  <!-- Footer Links 1 -->
+                  <div class="col-lg-2 col-md-6 footer-links">
+                      <h4>My Account</h4>
+                      <ul>
+                          <li><a href="#">My Account</a></li>
+                          <li><a href="#">Order History</a></li>
+                          <li><a href="#">Shopping Cart</a></li>
+                          <li><a href="#">Wishlist</a></li>
+                      </ul>
+                  </div>
+  
+                  <!-- Footer Links 2 -->
+                  <div class="col-lg-2 col-md-6 footer-links">
+                      <h4>Helps</h4>
+                      <ul>
+                          <li><a href="#">Contact</a></li>
+                          <li><a href="#">FAQs</a></li>
+                          <li><a href="#">Terms & Condition</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+  
+                  <!-- Footer Links 3 -->
+                  <div class="col-lg-2 col-md-6 footer-links">
+                      <h4>Categories</h4>
+                      <ul>
+                          <li><a href="#">Fruit & Vegetables</a></li>
+                          <li><a href="#">Meat & Fish</a></li>
+                          <li><a href="#">Bread & Bakery</a></li>
+                          <li><a href="#">Beauty & Health</a></li>
+                      </ul>
+                  </div>
+  
+                  <!-- Payment Options -->
+                  <div class="col-lg-2 col-md-6 footer-links">
+                      <h4>Proxy</h4>
+                      <ul>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Shop</a></li>
+                          <li><a href="#">Product</a></li>
+                          <li><a href="#">Track Order</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-md-12" style="text-align: left;">
+                      <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
+                  </div>
+                  <div class="col-lg-6 col-md-12" style="text-align: end;" >
+                      <img src="images/payment-img.png" alt="Payment Methods" class="img-fluid">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarLinks = document.querySelectorAll('.dashboard-user-btn li a');
+            const contentSections = document.querySelectorAll('.dashboard-user-list');
+
+            function showSection(id) {
+                contentSections.forEach(section => {
+                    section.classList.remove('dash-active');
+                });
+                document.getElementById(id).classList.add('dash-active');
+            }
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    sidebarLinks.forEach(link => {
+                        link.parentElement.classList.remove('dash-active');
+
+
+                    });
+
+                    link.parentElement.classList.add('dash-active');
+
+
+                    const sectionId = link.getAttribute('href').substring(1);
+                    showSection(sectionId);
+                });
+            });
+
+            // Show the first section by default
+            showSection('one');
+        });
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif !important;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* breadcrumb */
+
+
+.breadcrumb {
+    padding: 50px 20px !important;
+  
+    background: url('images/Breadcrumbs.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.breadcrumb-list{
+    margin-left: 100px;
+}
+.breadcrumb-list i , .breadcrumb-list span{
+    color: #999999;
+    margin: 0px 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.breadcrumb-list .active-page{
+    color: #00B207 !important;
+}
+
+#form{
+    margin: 50px auto;
+    max-width: 480px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 0px 56px 0px #00260314;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+#form h2{
+    margin: 10px 0 30px 0;
+}
+form input{
+   
+    width:  100%;
+   margin: 5px 0px;
+   padding: 8px;
+   border: 1px solid #E6E6E6;
+   border-radius: 5px;
+   color: #1A1A1A;
+   
+}
+form input:focus{
+    outline: #1A1A1A;
+    border: 1px solid #1A1A1A;
+}
+form input::placeholder{
+    color: #999999;
+}
+form .password{
+    position: relative;
+}
+.password-icon{
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    cursor: pointer;
+}
+.rem-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.rem-btn input{
+    width: fit-content !important;
+    margin: 0px !important;
+}
+.rem-btn label{
+    font-size: 14px;
+    color: #666666;
+   
+}
+.rem-btn a{
+  
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+text-align: left;
+color: #666666;
+text-decoration: none;
+
+}
+form button{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 6px 20px;
+    background-color: #00B207;
+    border: none;
+    border-radius: 30px;color: white;
+}
+.regiter{
+    margin: 10px auto;
+    text-align: center;
+}
+.regiter p{
+    color: #666666;
+    font-size: 15px;
+}
+.regiter span a{
+    color: #1A1A1A;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media (max-width:768px)
+{
+    .breadcrumb-list {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:550px)
+{
+    #form {
+        margin: 30px 20px;
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #F2F2F2;
+        box-shadow: 0px 0px 56px 0px #00260314;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .breadcrumb{
+        padding: 20px !important;
+    }
+}
