@@ -4,11 +4,12 @@ body{
     font-family: "Poppins", sans-serif !important;
     padding: 0px;
     margin: 0px;
+    overflow-x: hidden;
 }
 header{
     background-color: #FFFFFF;
     padding: 0px 0px;
-    display: none   ;
+    /* display: none   ; */
 }
 #head-01{
     max-width: 1200px;
@@ -117,12 +118,18 @@ input::placeholder{
     padding: 20px;
 }
 #head-03-inner{
+    position: relative;
     display: flex !important;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0px auto;
+}
+
+#head-03 .number {
+    position: relative;
+    z-index: 10;
 }
 #head-03-inner ul{
     padding: 0px;
@@ -156,6 +163,36 @@ input::placeholder{
     background-color: #F5F5F5;
 }
 
+.breadcrumb {
+    padding: 10px 20px !important;
+    display: flex !important;
+    align-items: center;
+}
+
+.breadcrumb ul {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+.breadcrumb ul li a,
+.breadcrumb ul li {
+    font-size: 14px;
+    line-height: 18px;
+    color: #606060;
+    text-decoration: none !important;
+}
+
+.breadcrumb ul li {
+    padding: 0 10px;
+}
+
+.breadcrumb ul li:last-child {
+    color: rgba(0, 0, 0, 0.5);
+}
 
 #td-btn{
     position: fixed;
@@ -184,15 +221,12 @@ input::placeholder{
     background: transparent;
     border: none;
     padding: 0;
-    z-index: 10;
-    position: absolute;
-    right: 40px;
 }
 
 .menu-icon div {
     width: 30px;
     height: 2px;
-  
+    background: #ccc;
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -301,21 +335,6 @@ input::placeholder{
     color: #6C6C6C;
 }
 
-.dropdown-menu li::after {
-    content: "";
-    position: absolute;
-    height: 18px;
-    width: 18px;
-    border: 1px solid #509F46;
-    right: 10px;
-    top: 15px;
-    border-radius: 50%;
-    background-image: url(images/arrow-right.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 6px;
-}
-
 .dropdown-menu.third {
     min-width: 380px !important;
 }
@@ -361,4 +380,225 @@ input::placeholder{
 
 .nav-item.dropdown:hover .arrow {
     transform: rotate(180deg);
+}
+
+.shopping-cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .shopping-cart-sidebar.active {
+    right: 0;
+  }
+  
+  .shopping-cart {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cart-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .cart-head h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #1A1A1A;
+  }
+
+  .close-btn {
+    border: 1px solid #CCCCCC;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 0;
+    height: fit-content;
+  }
+
+  .cart-items {
+    padding: 0;
+  }
+  
+  .cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .cart-details {
+    display: flex;
+  }
+
+  .item-detail {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-name {
+    font-size: 14px;
+    color: #1A1A1A;
+  }
+
+  .item-price {
+    font-size: 14px;
+    color: #808080;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #1A1A1A;
+  }
+  
+  .cart-summary {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-summary p {
+    font-size: 14px;
+  }
+
+  .checkout-btn, .go-to-cart {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .checkout-btn {
+    background-color: #00B207;
+    color: white;
+  }
+  
+  .go-to-cart {
+    background-color: #f0f0f0;
+    color: #00B207;
+  }
+
+  #cart-icon {
+    cursor: pointer;
+  }
+
+.logo-2 {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    #head-01,
+    #head-02 {
+        display: none;
+    }
+    #head-03 .nav-lists {
+        display: none;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #333;
+        width: 100%;
+        max-height: none !important;
+        height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+        z-index: 9;
+        top: 4rem;
+        right: 0;
+        padding-right: 0;
+        transition: 0.5s ease-in-out 0s !important;
+    }
+    #head-03 .dropdown-menu {
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+    #head-03 .dropdown-menu li {
+        width: 100%;
+        padding: 2px;
+        display: block;
+        border: none;
+    }
+    #head-03 .nav-lists.active {
+        display: flex;
+    }
+    #head-03 .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    #head-03 .nav-menu.right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #head-03 .nav-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5px 0;
+    }
+    #head-03 .dropdown-menu li::after {
+        display: none;
+    }
+    #head-03 .nav-item.dropdown:hover .dropdown-menu {
+        display: none; 
+    }
+    #head-03 .nav-item.dropdown .dropdown-menu {
+        display: none;
+    }
+    #head-03 .nav-item.dropdown.active .dropdown-menu {
+        display: block;
+    }
+    #head-03 .nav-item.dropdown .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 0 !important;
+        padding-left: 20px !important;
+        height: auto !important;
+        transition: all 0.5s ease-in-out 0s !important;
+        max-height: none !important;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    #head-03 .dropdown-menu li a {
+        color: #3781C0;
+        font-size: 0.85rem;
+    }
+    #head-03 .nav-item.dropdown.active .dropdown-menu {
+        display: block;
+    }
+    #head-03 .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        z-index: 10;
+    }
+    .dropdown-menu::before {
+        display: none;
+    }
+    .logo-2 {
+        display: block;
+        position: relative;
+        z-index: 10;
+    }
+    #head-03 .number {
+        display: none;
+    }
 }
