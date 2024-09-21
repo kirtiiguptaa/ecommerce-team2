@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog list Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+  />
+    <style>
+      
+     
+   
+        @media (max-width: 767px) {
+            .banner .breadcrumb-container {
+                top: 10px;
+                left: 10px;
+                padding: 5px;
+            }
+            .banner img {
+            width: 100%;
+            height: 50px;
+            display: block;
+        }
+        .row {
+    --bs-gutter-x: 1rem;
+
+  
+    margin-right: 0px !important;
+    margin-left: 0px !important ;
+}
+.blog-list-inner-sec{
+            margin: 0px;
+            border: 1px solid #E6E6E6;
+            border-radius: 5px;
+        }
+
+        }
+
+        .content-section {
+            padding: 0px 0;
+        }
+
+        .blog-img-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px 5px  0 0 ;
+            
+        }
+        .blog-list-inner-sec h5{
+    margin: 20px 10px;
+   color: #1A1A1A;
+font-size: 16px;
+font-weight: 500;
+line-height: 27px;
+text-align: left;
+
+}
+.blog-list-inner-sec a{
+   
+font-size: 14px;
+font-weight: 500;
+line-height: 19.2px;
+text-align: left;
+padding: 10px ;
+color: #00B207;
+text-decoration: none;
+}
+        .blog-list-inner-sec{
+            margin: 10px;
+            border: 1px solid #E6E6E6;
+            border-radius: 5px;
+        }
+        .blog-info {
+            margin:10px;
+        }
+
+        .blog-info span {
+            font-size: 14px;
+            margin-right: 10px;
+            color: #6c757d;
+        }
+
+        .search-bar input {
+            border-radius: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        .top-categories h5,
+        .popular-tags h5 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .top-categories ul {
+            padding-left: 0;
+        }
+
+        .top-categories ul li {
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f1f1f1;
+            padding-bottom: 5px;
+        }
+
+        .popular-tags .tags .btn {
+            margin: 5px 10px 5px 0;
+            padding: 7px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            background-color: #f8f9fa;
+            color: #6c757d;
+            border: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .popular-tags .btn:hover {
+            background-color: #28a745;
+            color: #fff;
+        }
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.blog-layout {
+  padding: 0px 0;
+}
+
+.blog-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.meta-info {
+  margin-left: 10px;
+}
+
+.meta-info .author-name {
+  font-weight: 600;
+  margin: 0px;
+}
+
+.meta-info .meta-date {
+  color: #888;
+  margin: 0px;
+}
+
+.social-icons {
+  margin-left: auto;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  color: #555;
+  font-size: 18px;
+}
+
+.blog-text {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.blog-images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.blog-images img {
+  width: 48%;
+  border-radius: 8px;
+}
+
+.sidebar {
+  padding: 20px;
+  
+}
+
+.gallery h3, .recent-posts h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+}
+
+
+.gallery-images img {
+  width: 100%;
+  border-radius: 8px;
+}
+.recent-posts{
+    margin: 20px 0px;
+}
+.recent-posts .post {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recent-posts .post img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+.recent-posts .post div {
+  flex: 1;
+}
+
+.recent-posts .post p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.recent-posts .post span {
+  color: #888;
+  font-size: 12px;
+}
+
+.newsletter {
+            background-color: #f5f5f5;
+            padding: 30px 0;
+        }
+
+        @media (max-width: 767px) {
+            .container{
+                padding: 0px;
+            }
+    .banner img {
+        
+        width: 100%;
+    }
+    .breadcrumb-container {
+        top: 5px;
+        left: 10px;
+        font-size: 12px;
+    }
+    .promo-section {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        justify-content: center;
+        
+   
+
+    }
+    .promo-section .promo-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .promo-text h2 {
+        font-size: 28px;
+    }
+    .promo-discount h2 {
+        font-size: 48px;
+    }
+    .comment-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+        
+    }
+    .comments-section{
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+        
+    }
+    .content-section {
+        padding: 10px 10px;
+    }
+    .blog-layout {
+        padding: 20px 10px;
+    }
+    .blog-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+    .blog-images img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .gallery-images {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+    .recent-posts .post img {
+        width: 50px;
+        height: 50px;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0px;
+    }
+    .social-icons{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .search-bar input {
+        width: 100%;
+    }
+    .top-categories ul {
+        font-size: 12px;
+    }
+    .comment-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    .social-icons a {
+        font-size: 16px;
+    }
+    .blog-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .comment-body h3 {
+        font-size: 14px;
+    }
+    .blog-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .comment-body p {
+        font-size: 12px;
+    }
+    .author-image{
+        margin: 10px 0px;
+    }
+    .load-more {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .blog-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .col-lg-8,
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+
+
+</style>
+
+
+   
+</head>
+<body>
+    <div class="breadcrumb">
+        <div class="breadcrumb-list">
+            <div>
+                <i class="fa-light fa-house"></i>
+            <i class="fa-light fa-angle-right"></i>
+            <span>Blog</span>
+            <i class="fa-light fa-angle-right"></i>
+
+            <span class="active-page">Blog list</span>
+            </div>
+        </div>
+     </div>
+
+<!-- Single Blog Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="row">
+              <!-- Sidebar Section -->
+              <div class="col-md-4">
+                <!-- Search Bar -->
+                <div class="search-bar mb-4">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+
+                <!-- Top Categories -->
+                <div class="top-categories mb-4">
+                    <h5>Top Categories</h5>
+                    <ul class="list-unstyled">
+                        <li>Fresh Fruit <span class="badge bg-light text-muted">(134)</span></li>
+                        <li>Vegetables <span class="badge bg-light text-muted">(150)</span></li>
+                        <li>Cooking <span class="badge bg-light text-muted">(54)</span></li>
+                        <li>Snacks <span class="badge bg-light text-muted">(47)</span></li>
+                        <li>Beverages <span class="badge bg-light text-muted">(43)</span></li>
+                        <li>Beauty & Health <span class="badge bg-light text-muted">(38)</span></li>
+                        <li>Bread & Bakery <span class="badge bg-light text-muted">(15)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Tags -->
+                <div class="popular-tags">
+                    <h5>Popular Tag</h5>
+                    <div class="tags">
+                        <button class="btn">Healthy</button>
+                        <button class="btn">Low Fat</button>
+                        <button class="btn">Vegetarian</button>
+                        <button class="btn">Bread</button>
+                        <button class="btn">Kid Foods</button>
+                        <button class="btn">Vitamins</button>
+                        <button class="btn">Snacks</button>
+                        <button class="btn">Tiffin</button>
+                        <button class="btn">Meat</button>
+                        <button class="btn">Lunch</button>
+                        <button class="btn">Dinner</button>
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <h3>Our Gallery</h3>
+                    <div class="gallery-images">
+                      <img src="images/ourgalery1.png" alt="Gallery Image">
+                      <img src="images/ourgalery2.png" alt="Gallery Image">
+                      <img src="images/ourgalery3.png" alt="Gallery Image">
+                      <img src="images/ourgalery4.png" alt="Gallery Image">
+                      <img src="images/ourgalery5.png" alt="Gallery Image">
+                      <img src="images/ourgalery6.png" alt="Gallery Image">
+                      <img src="images/ourgalery7.png" alt="Gallery Image">
+                      <img src="images/ourgalery8.png" alt="Gallery Image">
+                    </div>
+                  </div>
+          
+                  <div class="recent-posts">
+                    <h3>Recently Added</h3>
+                    <div class="post">
+                      <img src="images/recentlyadded1.png" alt="Recent Post">
+                      <div>
+                        <p>Curabitur porttitor orci eget neque accumsan.</p>
+                        <span>Apr 25, 2021</span>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <img src="images/recentlyadded2.png" alt="Recent Post">
+                      <div>
+                        <p>Donec mattis arcu faucibus suscipit viverra.</p>
+                        <span>Apr 25, 2021</span>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <img src="images/recentlyadded3.png" alt="Recent Post">
+                      <div>
+                        <p>Quisque posuere tempus rutrum. Integer velit ex.</p>
+                        <span>Apr 25, 2021</span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- Blog Image and Info Section -->
+            <div class="col-md-8">
+               <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-01.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-02.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-03.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-04.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+
+                    </div>
+                  </div>
+
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-05.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-06.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-07.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-08.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-09.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+
+                  <div class="col-lg-6 col-12">
+                    <div class="blog-list-inner-sec">
+                        <div class="blog-img-wrapper">
+                            <img src="images/blog-list-10.png" alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="blog-info">
+                            <span>
+                                <i class="fas fa-utensils"></i> Food
+                            </span>
+                            <span>
+                                <i class="fas fa-user"></i> By Admin
+                            </span>
+                            <span>
+                                <i class="fas fa-comments"></i> 65 Comments
+                            </span>
+                        </div>
+                        <h5>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                  </div>
+
+
+            
+
+         
+
+               </div>
+            </div>
+
+          
+        </div>
+    </div>
+</section>
+
+<!-- Subcribe our Newsletter -->
+
+<div id="newletter">
+    <div class="newletter-inner">
+       <div class="row">
+        <div class="col-md-5 col-12">
+            <h4>Subcribe our Newsletter</h4>
+            <p>
+                Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.
+            </p>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="newletter-input-sec">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn " type="button" id="button-addon2">Search</button>
+                
+                        
+                    
+                  </div>
+                  <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+ 
+           
+            </div>
+ 
+              
+ 
+        </div>
+       </div>
+    </div>
+ </div>
+
+ <footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Branding -->
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <img src="images/logo.png" class="img-fluid" alt="Ecobazar">
+                    <p>
+                        Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.
+                    </p>
+                    <div class="footer-contact">
+                        <p>(219) 555–0114</p>
+                        <span>Or</span>
+                        <p>Proxy@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Footer Links 1 -->
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Shopping Cart</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Links 2 -->
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Helps</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Links 3 -->
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Fruit & Vegetables</a></li>
+                        <li><a href="#">Meat & Fish</a></li>
+                        <li><a href="#">Bread & Bakery</a></li>
+                        <li><a href="#">Beauty & Health</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment Options -->
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Proxy</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12" style="text-align: left;">
+                    <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
+                </div>
+                <div class="col-lg-6 col-md-12" style="text-align: end;" >
+                    <img src="images/payment-img.png" alt="Payment Methods" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+</body>
+</html>
